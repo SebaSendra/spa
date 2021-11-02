@@ -1,0 +1,22 @@
+import spa.*
+import personas.*
+
+
+describe "pruebas con ramiro" {
+
+	test "testX" {
+		ramiro.diaDeTrabajo()
+		assert.that(ramiro.grasaDeLaPiel())
+		assert.equals(2,ramiro.nivelDeContractura())
+		spa.atender(ramiro)
+		assert.notThat(ramiro.grasaDeLaPiel())
+		assert.equals(0,ramiro.nivelDeContractura())
+		ramiro.diaDeTrabajo()
+		ramiro.jugarAlPaddle()
+		assert.that(ramiro.grasaDeLaPiel())
+		assert.equals(5,ramiro.nivelDeContractura())
+		spa.atender(ramiro)
+		assert.notThat(ramiro.grasaDeLaPiel())
+		assert.equals(3,ramiro.nivelDeContractura())
+	}
+}
